@@ -1,0 +1,11 @@
+# Optional dependencies for baseline retrieval systems and LLM evaluation
+
+# Vector database and embeddings
+chromadb>=0.4.24
+sentence-transformers>=2.3.1
+torch>=1.9.0
+numpy>=1.21.0
+
+# LLM-as-judge evaluation
+openai>=1.12.0
+python-dotenv>=1.0.1

@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "procedural-memory-benchmark"
+version = "0.1.0"
+description = "A benchmark for evaluating procedural memory retrieval systems"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Procedural Memory Research Team"}
+]
+keywords = ["procedural memory", "benchmark", "retrieval", "NLP", "AI"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+# Core package has no required dependencies
+dependencies = []
+
+[project.optional-dependencies]
+baselines = [
+    "chromadb>=0.4.24",
+    "sentence-transformers>=2.3.1",
+    "torch>=1.9.0",
+    "numpy>=1.21.0",
+]
+llm_judge = [
+    "openai>=1.12.0",
+    "python-dotenv>=1.0.1",
+]
+all = [
+    "procedural-memory-benchmark[baselines,llm_judge]",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/procedural-memory-benchmark"
+Documentation = "https://github.com/yourusername/procedural-memory-benchmark#readme"
+Repository = "https://github.com/yourusername/procedural-memory-benchmark"
+Issues = "https://github.com/yourusername/procedural-memory-benchmark/issues"
+
+[tool.setuptools]
+packages = ["procedural_memory_benchmark"]
+
+[tool.setuptools.package-data]
+procedural_memory_benchmark = [
+    "benchmark/data/*.json",
+    "data/corpus/*.json",
+]

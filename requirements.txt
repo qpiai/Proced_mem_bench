@@ -1,0 +1,8 @@
+# Core package has no required dependencies
+# The benchmark framework itself is dependency-free
+
+# To install with baseline implementations:
+# pip install -r requirements-baselines.txt
+
+# To install everything:
+# pip install .[all]
